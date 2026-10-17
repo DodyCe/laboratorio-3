@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#432344">
+  <title>Nova Agencia | Cotizador</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#cliente">Ir al formulario</a>
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M7 25V7l18 18V7M16 7v18" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg></span><div><span class="brand-name">Nova<span> Agencia</span></span><span class="brand-caption">ESTUDIO DIGITAL</span></div></div>
+      <span class="header-label"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zm0 0v6h6M8 13h8M8 17h5"/></svg> Cotizador de servicios</span>
+    </div>
+  </header>
+  <section class="project-banner" aria-labelledby="banner-title">
+    <img src="img/banner.webp" alt="" width="860" height="645" fetchpriority="high">
+    <div class="banner-content"><h1 id="banner-title">Te cotizamos tu proyecto.</h1></div>
+  </section>
+  <main class="workspace">
+    <div class="intro"><div><p class="eyebrow">DE LA IDEA AL PROYECTO</p><h2 class="intro-title">Tu próxima propuesta<br class="mobile-break"> empieza aquí.</h2><p class="intro-copy">Define los detalles y obtén una cotización clara, en segundos.</p></div><span class="currency-tag">COP <span>·</span> Pesos colombianos</span></div>
+    <div class="contenedor">
+      <section class="card form-card" aria-labelledby="form-title">
+        <div class="section-heading"><span class="section-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></span><div><h2 id="form-title">Datos del proyecto</h2><p>Todo lo que necesitamos para empezar.</p></div><span class="step-label">01</span></div>
+        <form id="formCotizacion" class="form" novalidate>
+          <div class="grupo"><label for="cliente">Nombre del cliente</label><div class="input-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><input id="cliente" type="text" placeholder="Ej. Café Central" autocomplete="organization" required></div></div>
+          <div class="grupo"><label for="servicio">Tipo de servicio</label><div class="input-wrap select-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg><select id="servicio" required><option value="">Selecciona un servicio</option><option value="web">Sitio web corporativo</option><option value="ecommerce">Tienda virtual</option><option value="landing">Landing page</option><option value="seo">Posicionamiento SEO</option></select><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 10 4 4 4-4"/></svg></div></div>
+          <div class="fila">
+            <div class="grupo"><label for="horas">Horas estimadas</label><div class="input-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><input id="horas" type="number" min="1" step="1" inputmode="numeric" placeholder="Ej. 20" required></div></div>
+            <div class="grupo"><label for="tarifa">Tarifa por hora <span class="label-unit">COP</span></label><div class="input-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="3"/><circle cx="12" cy="12" r="3"/><path d="M5 12h.01M19 12h.01"/></svg><input id="tarifa" type="number" min="1000" step="1000" placeholder="Ej. 60000" required></div></div>
+          </div>
+          <div class="grupo"><label for="descuento">Descuento autorizado</label><div class="input-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 19 14-14"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg><input id="descuento" type="number" min="1" max="100" step="any" value="1" aria-describedby="descuentoAyuda" required><span class="input-unit">%</span></div><p class="field-help" id="descuentoAyuda">Puedes aplicar un descuento entre el 1% y el 100%.</p></div>
+          <div class="actions"><button type="submit" class="primary">Calcular cotización <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></button><button type="reset" class="secundario"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6"/></svg> Limpiar</button></div>
+          <p id="mensaje" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+      <aside class="card summary-card" aria-labelledby="summary-title">
+        <div class="summary-heading"><h2 id="summary-title">Tu cotización</h2><span class="summary-symbol"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zm0 0v6h6M8 13h8M8 17h5"/></svg></span></div>
+        <div class="resumen" aria-live="polite">
+          <span class="etiqueta" id="estadoCotizacion">Por calcular</span>
+          <h3 id="resCliente">Sin datos</h3>
+          <p id="resServicio">Seleccione un servicio</p>
+          <div class="project-meta"><span id="resNivel">Nivel: sin datos</span><span id="resHoras">Horas cotizadas: 0</span></div>
+          <dl class="amounts"><div><dt>Subtotal</dt><dd id="subtotal">$0</dd></div><div><dt>Descuento <span class="deduction">−</span></dt><dd id="descuentoValor">$0</dd></div><div><dt>IVA <span class="tax-badge">19%</span></dt><dd id="ivaValor">$0</dd></div></dl>
+          <div class="total-block"><div class="total-heading"><span>Total estimado</span><span>COP</span></div><p id="total" class="precio">$0</p><p class="total-note">IVA incluido · Calculado sobre el subtotal</p></div>
+          <p id="resVencimiento" class="quote-validity"></p>
+          <div class="business-notices"><p id="resDedicacion"></p><p id="resAprobacion"></p></div>
+        </div>
+        <p class="summary-footnote"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg> Una estimación para dar el siguiente paso.</p>
+      </aside>
+    </div>
+    <div class="history-calendar-layout">
+    <section class="card history-card" aria-labelledby="history-title">
+      <div class="history-heading">
+        <div><p class="eyebrow">TUS PROPUESTAS, EN UN SOLO LUGAR</p><h2 id="history-title">Historial de cotizaciones <span id="historyCount" class="history-count">0</span></h2><p class="history-description">Consulta tus cotizaciones y descarga el registro completo.</p></div>
+        <div class="history-actions">
+          <label class="history-search"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span class="sr-only">Buscar por nombre o ID</span><input id="buscarHistorial" type="search" placeholder="Buscar nombre o ID" autocomplete="off"></label>
+          <button id="exportarHistorial" class="export-button" type="button" disabled><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 16v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg>Exportar CSV</button>
+          <button id="alternarHistorial" class="collapse-button" type="button" aria-expanded="true" aria-controls="historyContent"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg><span>Replegar</span></button>
+        </div>
+      </div>
+      <div id="historyContent" class="history-content">
+      <div id="historialVacio" class="history-empty"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zm0 0v6h6M8 13h8M8 17h5"/></svg><h3>Tu primera propuesta empieza arriba</h3><p>Al calcular una cotización válida, aparecerá aquí automáticamente.</p></div>
+      <div id="historialTabla" class="history-scroll" role="region" aria-label="Cotizaciones guardadas; desplaza horizontalmente para ver todas las columnas" tabindex="0" hidden>
+        <table><caption class="sr-only">Historial, de la cotización más reciente a la más antigua. Importes en COP.</caption><thead><tr><th scope="col">ID</th><th scope="col">Fecha y hora</th><th scope="col">Cliente</th><th scope="col">Servicio</th><th scope="col">Vencimiento</th><th scope="col">Estado</th><th scope="col" class="amount-column">Total con IVA</th></tr></thead><tbody id="historialFilas"></tbody></table>
+      </div>
+      <div class="history-bottom"><p>Guardado en este navegador · Exportación en pesos colombianos</p><p id="historialMensaje" role="status" aria-live="polite"></p></div>
+      </div>
+    </section>
+    <aside class="card calendar-card" aria-labelledby="calendar-title">
+      <div class="calendar-heading"><p class="eyebrow">VIGENCIA DE PROPUESTAS</p><h2 id="calendar-title">Calendario de vencimientos</h2><p id="vigenciaAyuda" class="history-description"></p></div>
+      <div class="calendar-navigation"><button id="mesAnterior" type="button" aria-label="Mes anterior"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button><h3 id="mesCalendario" aria-live="polite"></h3><button id="mesSiguiente" type="button" aria-label="Mes siguiente"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button></div>
+      <div class="calendar-weekdays" aria-hidden="true"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+      <div id="diasCalendario" class="calendar-days" role="group" aria-label="Días del mes"></div>
+      <div class="calendar-legend"><span><i></i> Con vencimientos</span><button id="calendarioHoy" type="button">Ir a hoy</button></div>
+      <div class="calendar-details"><h3 id="diaSeleccionado"></h3><ul id="vencimientosDia" aria-live="polite"></ul></div>
+    </aside>
+    </div>
+    <section class="card chart-card" aria-labelledby="chart-title">
+      <div class="history-heading"><div><p class="eyebrow">EL HISTORIAL, EN PERSPECTIVA</p><h2 id="chart-title">Valor de las cotizaciones</h2><p class="history-description">Total con IVA por cotización. Elige el orden para comparar los importes.</p></div><button id="exportarGrafico" class="export-button" type="button" disabled><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 16v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg>Exportar gráfico PDF</button></div>
+      <div class="chart-sort"><label for="ordenGrafico">Ordenar gráfico</label><select id="ordenGrafico"><option value="recientes">Agregadas recientemente</option><option value="mayor">Mayor a menor valor</option><option value="menor">Menor a mayor valor</option></select></div>
+      <p id="graficoVacio" class="history-empty">Crea una cotización para empezar a visualizar el historial.</p>
+      <div id="graficos" class="chart-pages" role="region" aria-label="Gráficos del historial" tabindex="0" hidden></div>
+      <div class="history-bottom"><p>Importes en COP · El PDF incluye todas las cotizaciones del historial.</p><p id="graficoMensaje" role="status" aria-live="polite"></p></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand"><span class="footer-name">Nova Agencia<span class="brand-dot">.</span></span><p>Ideas que se convierten en digital.</p></div>
+        <div class="footer-services"><h2>Servicios digitales</h2><p>Sitios web corporativos · Tiendas virtuales<br>Landing pages · Posicionamiento SEO</p></div>
+        <a class="footer-link" href="#cliente">Crear una cotización <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Nova Agencia.</span><span>Cotizaciones en pesos colombianos · IVA del 19%</span></div>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+  <script src="js/grafico.js"></script>
+  <script src="js/calendario.js"></script>
+  <script src="js/historial.js"></script>
+  <script src="js/animaciones.js"></script>
+</body>
+</html>

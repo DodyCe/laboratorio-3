@@ -1,0 +1,20 @@
+# Documentos y evidencias de actividades
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+evidencias/
+tests/
+
+# Archivos locales
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+.vscode/
+.DS_Store
+Thumbs.db
